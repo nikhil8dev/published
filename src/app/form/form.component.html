@@ -1,1 +1,45 @@
-<p>form works!</p>
+<div class="contain d-flex justify-content-center" style="width: 100%; background-color: whitesmoke;">
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+             <h4>Contact Form</h4>
+  <div class="contactForm d-flex flex-column m-auto " style="width: 70%;">
+  <input type = "text" name = "fullName" placeholder = "Your full name" formControlName="fullName" >
+  <br/>
+
+  <input type = "email" name = "email" placeholder = "Your email" formControlName="email" >
+  <br/>
+
+  <textarea name = "message" placeholder = "Your message" formControlName="message" ></textarea>
+  <br/>
+</div>
+<h3 class="right">Address</h3>
+
+  <div formGroupName="address">
+    <div class="d-flex flex-column m-auto justify-content-center" style="width: 70%;">
+    <label>
+    Street:
+    <input type="text" formControlName="street">
+    </label>
+
+    <label>
+    City:
+    <input type="text" formControlName="city">
+    </label>
+
+    <label>
+    State:
+    <input type="text" formControlName="state">
+    </label>
+
+    <label>
+    Zip Code:
+    <input type="text" formControlName="zip">
+    </label>
+  </div>
+  <div  class="ml-4">
+    <input  type = "submit" value = "Send">
+   </div>
+  </div>
+
+</form>
+
+</div>
