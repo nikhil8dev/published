@@ -21,7 +21,7 @@
 
 
  <div class="form-group" >
-  <textarea name = "message" placeholder = "Your message" formControlName="message"  [ngClass]="{'is-invalid': contactForm.get('email').touched && contactForm.get('email').invalid}"></textarea>
+  <textarea name = "message" placeholder = "Your message" formControlName="message"  [ngClass]="{'is-invalid': contactForm.get('message').touched && contactForm.get('message').invalid}"></textarea>
   <br/>
   <div class="invalid-feedback">
     <div>message is required</div>
